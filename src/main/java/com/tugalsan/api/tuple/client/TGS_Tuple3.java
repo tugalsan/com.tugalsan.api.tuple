@@ -1,10 +1,9 @@
 package com.tugalsan.api.tuple.client;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
-import com.tugalsan.api.clone.client.TGS_Cloneable;
+import java.io.Serializable;
 import java.util.Objects;
 
-public class TGS_Tuple3<A, B, C> implements IsSerializable {
+public class TGS_Tuple3<A, B, C> implements Serializable/*implements IsSerializable*/ {
 
     public TGS_Tuple3() {//DTO
     }
