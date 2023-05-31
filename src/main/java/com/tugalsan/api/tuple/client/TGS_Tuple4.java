@@ -1,6 +1,7 @@
 package com.tugalsan.api.tuple.client;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
+import java.util.Objects;
 
 public class TGS_Tuple4<A, B, C, D> implements IsSerializable {
 
@@ -37,5 +38,10 @@ public class TGS_Tuple4<A, B, C, D> implements IsSerializable {
 
     public static <A, B, C, D> TGS_Tuple4<A, B, C, D> of() {
         return new TGS_Tuple4();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(value0, value1, value2, value3);
     }
 }
