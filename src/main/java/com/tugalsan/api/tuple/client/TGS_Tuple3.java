@@ -1,4 +1,4 @@
-package com.tugalsan.api.pack.client;
+package com.tugalsan.api.tuple.client;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
 
