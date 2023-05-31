@@ -1,6 +1,7 @@
 package com.tugalsan.api.tuple.client;
 
 import com.google.gwt.user.client.rpc.IsSerializable;
+import com.tugalsan.api.clone.client.TGS_Cloneable;
 import java.util.Objects;
 
 public class TGS_Tuple6<A, B, C, D, E, F> implements IsSerializable {
@@ -42,6 +43,24 @@ public class TGS_Tuple6<A, B, C, D, E, F> implements IsSerializable {
 
     public static <A, B, C, D, E, F> TGS_Tuple6<A, B, C, D, E, F> of() {
         return new TGS_Tuple6();
+    }
+
+    public TGS_Tuple6<A, B, C, D, E, F> cloneIt() {
+        return TGS_Tuple6.of(value0, value1, value2, value3, value4, value5);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof TGS_Tuple6)) {
+            return false;
+        }
+        var t = (TGS_Tuple6) obj;
+        return Objects.equals(t.value0, value0)
+                && Objects.equals(t.value1, value1)
+                && Objects.equals(t.value2, value2)
+                && Objects.equals(t.value3, value3)
+                && Objects.equals(t.value4, value4)
+                && Objects.equals(t.value5, value5);
     }
 
     @Override
