@@ -3,7 +3,7 @@ package com.tugalsan.api.tuple.client;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class TGS_Tuple3<A, B, C> implements Serializable/*implements IsSerializable*/ {
+public class TGS_Tuple3<A, B, C> implements Serializable {
 
     public TGS_Tuple3() {//DTO
     }
